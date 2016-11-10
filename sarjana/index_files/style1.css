@@ -1,0 +1,857 @@
+/* === Fonts === */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic); */
+body {
+/*    font-family: 'Open Sans', sans-serif;	*/
+font-family: 'Montserrat', sans-serif;
+	color: #595959;
+}
+
+/* Navbar hamburger top */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+/* Navbar hamburger main nav */
+.main-nav .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+/*body */
+
+p:not(.cut3) {
+	font-weight: 100;
+	line-height: 180%;
+	letter-spacing: -0.1pt;
+	margin-bottom: 18px;
+	color: #595959;
+}
+
+.cut3 > p {
+    font-weight: 100;
+    line-height: 150%;
+    letter-spacing: 0pt;
+    margin-bottom: 0px;
+}
+
+ol:not(.breadcrumb) > li {
+	font-weight: 100;
+	line-height: 170%;
+	letter-spacing: -0.2pt;
+	margin-bottom: 12px;
+}
+
+
+.listing ol > li {
+	font-weight: 100;
+	line-height: 120%;
+	letter-spacing: -0.2pt;
+	margin-bottom: 0px;
+}
+
+div:not(.submenu) > ul:not(.timeline) > li {
+    line-height: 210%;
+}
+
+/* === Icon === */
+.iconastic {
+	text-align: center;
+	font-size: 70px;
+}
+
+/* === Headings === */
+h1 {
+	color: #01172e;
+	margin-bottom: 40px;
+}
+h1:after {
+    content:' ';
+	margin-top: 20px;
+	width: 100px;
+    display:block;
+    border:2px solid #00bbe8;
+}
+
+
+h3 {
+	font-weight: bold;
+	font-size: 20px;
+	color: #333;
+}
+
+
+h4 {
+	color: #01172e;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+h2, h4, h5, h6 {
+	color: #333;
+}
+
+h2 {
+	color: #01172e;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+h2:after {
+    content:' ';
+	margin-top: 20px;
+	width: 100px;
+    display:block;
+    border:2px solid #ffc600;
+}
+
+/* === Header === */
+.main-header {
+	background: url("http://sarjana.jteti.ugm.ac.id/media/1051/header.png");
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+/* === Navbar === */
+.top-nav {
+	margin-bottom: 0px;
+	font-size: 12px;
+	background: #ffc600;
+}
+
+.main-nav {
+	font-weight: 300;
+	font-size: 14px;
+	background: #01172e;
+}
+
+.navbar-main > li > a {
+	color: #ffc600;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	border: 0px;
+	background-color: #ffffff;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	border: 0px;
+	background-color: #ffffff;
+}
+
+.navbar {
+	border-radius: 0px;
+	border: 0px;
+}
+
+.navbar-default {
+	border: 0px;
+}
+
+/* Navbar Searchbox */
+.navbar-form > .form-group > .form-control {
+	background-color: #ffc600;
+	border-radius: 0px;
+	border: 1px solid #dbaa00;
+    transition: ease-in-out, .35s ease-in-out;
+	color: #fff;
+}
+
+.navbar-form > .form-group > .form-control:focus {
+	background-color: #ffffff;
+	border-radius: 0px;
+	border: 1px solid #dbaa00;
+	color: #2b2b2b;
+}
+
+.navbar-form > button {
+	background-color: #ffc600;
+	border-radius: 0px;
+	border: 1px solid #dbaa00;
+	color: #fff;
+}
+
+.navbar-form > button:hover {
+	background-color: #fff;
+	border-radius: 0px;
+	border: 1px solid #dbaa00;
+	color: #ffc600;
+}
+
+/* @media (min-width: 760px) {
+-- Set Dropdown Display to None --
+nav ul ul {
+	display: none;
+}
+
+-- Display Dropdown on hover --
+
+nav ul li:hover > ul {
+		display: block;
+}
+
+nav ul ul {
+	background: #222222; 
+ 	border-radius: 0px; 
+	position: absolute; 
+}
+
+nav ul ul li a{
+  color: #fff;
+  opacity: .5;
+}
+
+nav ul ul li a:hover{
+  color: #fff;
+  opacity: 1;
+}
+} */
+
+nav ul ul {
+	background: #222222; 
+ 	border-radius: 0px; 
+	position: absolute; 
+}
+
+@media (min-width: 760px) {
+nav ul ul li a{
+  color: #14212e;
+  opacity: .5;
+}
+
+nav ul ul li a:hover{
+  color: #fff;
+  opacity: 1;
+}
+}
+
+@media (max-width: 759px) {
+nav ul ul li a{
+  color: #fff;
+}
+
+nav ul ul li a:hover{
+  color: #fff;
+  opacity: 1;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+}
+}
+
+/* === Link === */
+a {
+	color: #0096ba;
+}
+
+a:hover {
+	color: #155da8;
+	text-decoration: none;
+}
+
+/* === Banner === */
+.sideBanner > .image {
+	width: 100%;
+	height: 120px;
+	background-color: #f0f0f0;
+	margin-bottom: 20px;
+}
+
+.sideBanner > .image >.caption > div {
+	margin-top: 12px;
+	font-size: 12px;
+	font-weight: 100;
+	color: #fff;
+}
+
+.sideBanner > .image > .caption > div > .header {
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+.sideBanner > .image > .caption > div > .footer {
+	margin-top: 5px;
+	font-size: 12px;
+	bottom: 0;
+}
+
+.sideBanner > .image > .caption > div > .footer a {
+	color: #ffc600;
+}
+
+/* === Headers === */
+h3 {
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 4px solid #efefef;
+}
+
+/* === Nav Bar Sub Menu (Additional) === */
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+/* === Container === */
+.container-grey {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #efefef;
+}
+
+.container-bluebg {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #ffc600;
+/*	background: url("../img/currentStudent.png");
+*/}
+
+
+/* === Notice Item === */
+.notice-item {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px #000000;
+	font-size: 13px;
+}
+
+.notice-item > .date {
+	color: #b2b2b2;
+	margin-bottom: 4px;
+	float: left;
+	width: 60px;
+	margin-right: 10px;
+}
+
+/* === News Item (Home) === */
+.news-item {
+	margin-bottom: 50px;
+}
+
+.news-1 .news-item > .news-date {
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	color: #fff;
+	background: url("http://sarjana.jteti.ugm.ac.id/media/1050/currentstudent.png");
+	/*background-color: #01172e;*/
+	margin-right: 20px;
+}
+
+.news-2 .news-item > .news-date {
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	color: #fff;
+	background: url("http://sarjana.jteti.ugm.ac.id/media/1055/prospectstudent.png");
+	/*background-color: #01172e;*/
+	margin-right: 20px;
+}
+
+.news-item > .news-date > .month {
+	margin-top: 6px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.news-item > .news-date > .date {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.news-title {
+	font-size: 13px;
+}
+
+/* === Readmore === */
+.readmore {
+	font-size: 12px;
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.readmore > a {
+	display: inline-block;
+/*	padding: 15px 25px 15px 25px;
+	border: 1px solid #a2a2a2;*/
+}
+
+.readmore > a:hover {
+/*	background-color: #e5e5e5;*/
+}
+
+/* === Info Lists === */
+.info-lists {
+	font-size: 12px;
+	list-style-type: circle;
+	margin-bottom: 15px;
+}
+
+.info-lists > li {
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+
+/* === Footer ==== */
+.footer-link {
+	line-height: 30px;
+}
+
+.footer-link a {
+	color: #011d35;
+}
+
+.disclaimer {
+	background-color: #0a0a0a;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 11px;
+	color: #fff;
+	background: url("http://sarjana.jteti.ugm.ac.id/media/1051/header.png");
+}
+
+/* === HTML5 Slider === */
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+figure { 
+  margin: 0; background: #101010;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+}
+div#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+}
+figure.slider { 
+  position: relative; width: 500%;
+  font-size: 0; animation: 30s slidy infinite; 
+}
+figure.slider figure { 
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit; 
+}
+figure.slider img { width: 100%; height: auto; }
+figure.slider figure figcaption { 
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: #fff; width: 100%;
+}
+
+figure.slider figure figcaption > .head {
+	margin: 20px 20px 0px 20px;
+  	font-size: 18px;
+}
+
+figure.slider figure figcaption > .caption {
+	margin: 0px 20px 20px 20px;
+  	font-size: 12px;
+
+}
+
+/* === Submenu === */
+.submenu {
+	background: url("http://sarjana.jteti.ugm.ac.id/media/1056/submenu.png"); 
+/*	background-color: #0096ba;*/
+	padding: 20px 40px 20px 0px;
+}
+
+.submenu > ul {
+	color: #fff;
+	list-style-type: none;
+}
+
+.submenu > ul > li {
+	color: #fff;
+	letter-spacing: 0px;
+	padding: 10px 0px 10px 0px;
+	border-bottom: 1px dotted #a5e2f0;
+}
+
+.submenu > ul > .head {
+	color: #01172e;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/*.submenu > ul > li:not(.head):hover {
+	background-color: rgba(0,114,140,0.7);
+}*/
+
+.submenu > ul > li:hover {
+	background-color: rgba(0,114,140,0.7);
+}
+
+.submenu > ul > li > a {
+	color: #01172e;
+}
+
+.submenu > ul > li:not(.head) > a {
+	color: #fff;
+}
+
+
+/* === Labels ==== */
+.label-blue {
+	background-color: #00bbe8;
+}
+
+.label-gold {
+	background-color: #ffc600;
+}
+
+/* === Table === */
+.table-date {
+	color: #b3b3b3;
+}
+
+tr.clickable-row { 
+	cursor: pointer; 
+} 
+
+@media screen and (min-width: 480px) {
+	.table-pad>tbody>tr>td, .table-pad>tbody>tr>th, .table-pad>tfoot>tr>td, .table-pad>tfoot>tr>th, .table-pad>thead>tr>td, .table-pad>thead>tr>th {
+		padding: 14px;
+		line-height: 24px;	
+	}
+
+	.table-date {
+		min-width: 160px;
+	}
+}
+
+
+.longUrl {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+}
+
+/* === List Data Styling === */
+
+.name-list > div {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.nameHead {
+	font-size: 18px;
+}
+
+.fakelink {
+	color: #0e93ce;
+}
+
+.thumb {
+	margin-top: 10px;
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+}
+
+.thumb img {
+    height: 300px;
+    margin: -75px 0 0 -100px;
+}
+
+
+/* == News Lists == */
+
+.news-list {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #efefef;
+}
+
+.news-list > div > .news-date {
+	background: url("http://sarjana.jteti.ugm.ac.id/media/1055/prospectstudent.png");
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+
+
+.news-list > div > .news-date > .month {
+	margin-top: 6px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffc600;
+}
+
+.news-list > div > .news-date > .date {
+	text-align: center;
+	font-size: 40px;
+}
+
+.cut {
+	color: #777777;
+	line-height: 170%;
+	letter-spacing: -0.2pt;
+	margin-bottom: 18px;
+	font-size: 12px;
+}
+
+.categoryBullet > li {
+	margin-top: 10px;
+	font-size: 16px;
+	list-style: circle;
+}
+
+.searchResultLists {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.pagination>li>a, .pagination>li>span {
+    margin-left: 5px;
+}
+
+
+/* -----------------------------------------------
+ * Timeline
+ * --------------------------------------------- */
+ .timeline {
+    list-style: none;
+    padding: 10px 0;
+    position: relative;
+    font-weight: 300;
+}
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 2px;
+    background: #f0f0f0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+    width: 50%;
+    float: left;
+    clear: left;
+}
+.timeline > li:before, .timeline > li:after {
+    content:" ";
+    display: table;
+}
+.timeline > li:after {
+    clear: both;
+}
+.timeline > li:before, .timeline > li:after {
+    content:" ";
+    display: table;
+}
+.timeline > li:after {
+    clear: both;
+}
+.timeline > li > .timeline-panel {
+    width: calc(100% - 25px);
+    width: -moz-calc(100% - 25px);
+    width: -webkit-calc(100% - 25px);
+    float: left;
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    position: relative;
+}
+.timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #dcdcdc;
+    border-right: 0 solid #dcdcdc;
+    border-bottom: 15px solid transparent;
+    content:" ";
+}
+.timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #ffffff;
+    border-right: 0 solid #ffffff;
+    border-bottom: 14px solid transparent;
+    content:" ";
+}
+.timeline > li > .timeline-badge {
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    right: -12px;
+    z-index: 100;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+.timeline-badge > a {
+    color: #ffffff !important;
+}
+.timeline-badge a:hover {
+    color: #dcdcdc !important;
+}
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+.timeline-heading h4 {
+    font-weight: 400;
+    font-size: 16px;
+/*    padding: 0 15px;*/
+    color: #4679bd;
+}
+.timeline-body > p, .timeline-body > ul {
+    padding: 10px 0px;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.timeline-footer {
+    padding: 5px 15px;
+    background-color:#f4f4f4;
+}
+.timeline-footer p { margin-bottom: 0; }
+.timeline-footer > a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.timeline > li.timeline-inverted {
+    float: right;
+    clear: right;
+}
+.timeline > li:nth-child(2) {
+    margin-top: 60px;
+}
+.timeline > li.timeline-inverted > .timeline-badge {
+    left: -12px;
+}
+.no-float {
+    float: none !important;
+}
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+    ul.timeline > li {
+        margin-bottom: 0px;
+        position: relative;
+        width:100%;
+        float: left;
+        clear: left;
+    }
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 65px);
+        width: -moz-calc(100% - 65px);
+        width: -webkit-calc(100% - 65px);
+    }
+    ul.timeline > li > .timeline-badge {
+        left: 28px;
+        margin-left: 0;
+        top: 16px;
+    }
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+    ul.timeline > li > .timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    ul.timeline > li > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+    .timeline > li.timeline-inverted {
+        float: left;
+        clear: left;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .timeline > li.timeline-inverted > .timeline-badge {
+        left: 28px;
+    }
+}
+
+.timelineThumb {
+	width: 76px;
+	margin-top: 15px;
+}
+
+.person {
+	width: 60px;
+	height: 60px;
+}

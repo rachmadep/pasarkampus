@@ -13,12 +13,11 @@
 		
 		<div class="main-footer-content">			
 			<!-- IMPORTANT! This is the license for the Open Classifieds software, do not remove!-->
-				<p class="ocLicence text-center">&copy;
+				<p class="ocLicence text-center">
 				<?if (Theme::get('premium')!=1):?>
-					Web Powered by <a href="http://open-classifieds.com?utm_source=<?=URL::base()?>&utm_medium=oc_footer&utm_campaign=<?=date('Y-m-d')?>" title="Best PHP Script Classifieds Software">Open Classifieds</a> 
-					2009 - <?=date('Y')?>
+					Departemen Teknik Elektro dan Teknologi Informasi </br>Fakultas Teknik, Universitas Gadjah Mada
 				<?else:?>
-					<?=core::config('general.site_name')?> <?=date('Y')?>
+					<?=core::config('general.site_name')?>
 				<?endif?>
 				</p>
 			<!-- IMPORTANT! This is the license for the Open Classifieds software, do not remove!-->	

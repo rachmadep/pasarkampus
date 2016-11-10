@@ -55,7 +55,11 @@
 								<span class="ad_price"><?=_e('Check Listing');?></span>
 							<?endif?>
 							</a>
+							<a class="title-homeads" href="<?=Route::url('ad', array('category'=>$ad->category->seoname,'seotitle'=>$ad->seotitle))?>" title="<?=$ad->title?>" style="height: 23px;">
+							<?=$ad->title?>	
+							</a>
 						</div>
+
 					</li>
 				<?endforeach?>
 				</ul>
@@ -68,6 +72,7 @@
 <?endif?>
 <!-- // MAIN CONTENT - ADS -->
 <!-- MAIN CONTENT - GET STARTED -->
+<!--
 <div class="post-ad-banner color-section">
 	<div class="container">
 		<div class="row">
@@ -84,6 +89,7 @@
 		</div>
 	</div>
 </div>
+-->
 <!-- // MAIN CONTENT - GET STARTED -->
 <br>
 <br>
@@ -96,7 +102,7 @@
 					<div class="row">
 					<?$i=0; foreach($categs as $c):?>
 						<?if($c['id_category_parent'] == 1 && $c['id_category'] != 1):?>
-							<div class="col-xs-4 col-sm-4 col-md-4">
+							<div class="col-xs-12 col-sm-4 col-md-4">
 								<div class="panel panel-home-categories">
 									<div class="panel-heading">
 										<a title="<?=HTML::chars($c['name'])?>" href="<?=Route::url('list', array('category'=>$c['seoname'], 'location'=>$user_location ? $user_location->seoname : NULL))?>"><?=mb_strtoupper($c['name']);?> (<?=number_format($c['count'])?>)</a>

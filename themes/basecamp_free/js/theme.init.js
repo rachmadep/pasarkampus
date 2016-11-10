@@ -1,5 +1,7 @@
 $(function(){
     
+$("div.navbar-fixed-top").autoHidingNavbar();
+
     //sceditorBBCodePlugin for validation, updates iframe on submit 
 $("button[name=submit]").click(function(){
     $("textarea[name=description]").data("sceditor").updateOriginal();
@@ -80,3 +82,4 @@ $(function(){
         }
     }).height(maxHeight);
 });
+

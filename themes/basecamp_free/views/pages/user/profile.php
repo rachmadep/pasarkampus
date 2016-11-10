@@ -3,12 +3,12 @@
 <div class="pad_10tb">
 	<div class="container profile-view">
 		<div class="row">
-			<div class="<?=(Theme::get('sidebar_position')!='none')?'col-xs-9':'col-xs-12'?> <?=(Theme::get('sidebar_position')=='left')?'pull-right':'pull-left'?>">
+			<div class="<?=(Theme::get('sidebar_position')!='none')?'col-xs-12':'col-xs-12'?> <?=(Theme::get('sidebar_position')=='left')?'pull-right':'pull-left'?>">
 				<div class="pad_10">
 					<article class="well clearfix">
 						<div class="col-sm-3">
 							<a class="thumbnail profile-img">
-								<?=HTML::picture($user->get_profile_image(), ['w' => 200, 'h' => 200], ['1200px' => ['w' => '167', 'h' => '167'], '992px' => ['w' => '182', 'h' => '182'], '768px' => ['w' => '190', 'h' => '190'], '480px' => ['w' => '190', 'h' => '190'], '320px' => ['w' => '190', 'h' => '190']], ['class' => 'img-rounded'], ['alt' => __('Profile Picture')])?>
+								<?=HTML::picture($user->get_profile_image(), ['w' => 200, 'h' => 200], ['1200px' => ['w' => '167', 'h' => '167'], '992px' => ['w' => '182', 'h' => '182'], '768px' => ['w' => '190', 'h' => '190'], '480px' => ['w' => '190', 'h' => '190'], '320px' => ['w' => '190', 'h' => '190']], ['style' => 'max-width:100%'],['alt' => __('Profile Picture')])?>
 							</a>
 						</div>
 						<div class="col-sm-9">

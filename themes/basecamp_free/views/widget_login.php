@@ -24,11 +24,7 @@
 					<i class="glyphicon glyphicon-star"></i> <?=_e('My Favorites')?>
 				</a>
 			</li>
-			<li>
-				<a href="<?=Route::url('oc-panel',array('controller'=>'profile','action'=>'orders'))?>">
-					<i class="glyphicon glyphicon-shopping-cart"></i> <?=_e('My Payments')?>
-				</a>
-			</li>
+			
 			<?if(core::config('payment.paypal_seller') == TRUE OR Core::config('payment.stripe_connect')==TRUE):?>
 				<li>
 					<a href="<?=Route::url('oc-panel',array('controller'=>'profile','action'=>'sales'))?>">
@@ -43,11 +39,7 @@
 					</a>
 				</li>
 			<?endif?>
-			<li>
-				<a href="<?=Route::url('oc-panel',array('controller'=>'profile','action'=>'subscriptions'))?>">
-					<i class="glyphicon glyphicon-envelope"></i> <?=_e('Subscriptions')?>
-				</a>
-			</li>
+			
 			<li>
 				<a href="<?=Route::url('oc-panel',array('controller'=>'profile','action'=>'edit'))?>">
 					<i class="glyphicon glyphicon-lock"></i> <?=_e('Edit profile')?>

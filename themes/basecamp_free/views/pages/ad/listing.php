@@ -1,8 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');?>
-<div class="pad_10tb">
+<div class="pad_12tb">
 	<div class="container">
 		<div class="row">
-			<div class="<?=(Theme::get('sidebar_position')!='none')?'col-xs-9':'col-xs-12'?> <?=(Theme::get('sidebar_position')=='left')?'pull-right':'pull-left'?>">
+			<div class="<?=(Theme::get('sidebar_position')!='none')?'col-xs-12':'col-xs-12'?> <?=(Theme::get('sidebar_position')=='left')?'pull-right':'pull-left'?>">
 				<?if ($category!==NULL):?>
 					<div class="page-header">
 						<h3><?=$category->name?></h3>
@@ -52,8 +52,8 @@
 						</div>
 					
 						<div class="sort_opts btn-group ">
-							<a class="btn btn-sm btn-base-dark <?=(core::cookie('list/grid')==0)?'active':''?>" id="grid" href="#"><span class="glyphicon glyphicon-th-large"></span></a>
-							<a class="btn btn-sm btn-base-dark <?=(core::cookie('list/grid')==1)?'active':''?>" id="list" href="#"><span class="glyphicon glyphicon-th-list"></span></a>	
+							<a class="btn btn-sm btn-base-dark <?=(core::cookie('list/grid')==1)?'active':''?>" id="grid" href="#"><span class="glyphicon glyphicon-th-large"></span></a>
+							<a class="btn btn-sm btn-base-dark <?=(core::cookie('list/grid')==0)?'active':''?>" id="list" href="#"><span class="glyphicon glyphicon-th-list"></span></a>	
 						<button type="button" id="sort" data-sort="<?=core::request('sort')?>" class="btn btn-sm btn-base-dark dropdown-toggle" data-toggle="dropdown">
 							<span class="glyphicon glyphicon-sort-by-attributes-alt"></span> <?=_e('Sort')?> <span class="caret"></span>
 						</button>
@@ -74,34 +74,36 @@
 							</ul>
 						</div>
 				
-						<div class="clearfix"></div>
-					</div>
-					<div class="text-right">
+					<div class="text-left">
 						<div class="btn-group">
 							<button class="btn btn-base-dark btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<?=_e('Show').' '.core::request('items_per_page').' '._e('items per page')?> <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu dropdown-menu-right" role="menu" id="show-list">
-								<li><a href="?<?=http_build_query(['items_per_page' => '5'] + Request::current()->query())?>">  5 <?=_e('per page')?></a></li>
-								<li><a href="?<?=http_build_query(['items_per_page' => '10'] + Request::current()->query())?>"> 10 <?=_e('per page')?></a></li>
+								<li><a href="?<?=http_build_query(['items_per_page' => '4'] + Request::current()->query())?>">  4 <?=_e('per page')?></a></li>
+								<li><a href="?<?=http_build_query(['items_per_page' => '12'] + Request::current()->query())?>"> 12 <?=_e('per page')?></a></li>
 								<li><a href="?<?=http_build_query(['items_per_page' => '20'] + Request::current()->query())?>"> 20 <?=_e('per page')?></a></li>
-								<li><a href="?<?=http_build_query(['items_per_page' => '50'] + Request::current()->query())?>"> 50 <?=_e('per page')?></a></li>
+								<li><a href="?<?=http_build_query(['items_per_page' => '52'] + Request::current()->query())?>"> 52 <?=_e('per page')?></a></li>
 								<li><a href="?<?=http_build_query(['items_per_page' => '100'] + Request::current()->query())?>">100 <?=_e('per page')?></a></li>
 							</ul>
 						</div>
 					</div>
+
+						<div class="clearfix"></div>
+					</div>
+
 				<!-- // FILTER OPTIONS -->
 
 				<!-- AD LIST -->
 				<div class="ad_listings">
 					<ul class="ad_list list clearfix">
 						<?$ci=0; foreach($ads as $ad ):?>
-						<?if($ci%3==0 OR $ci==0):?><div class="row"><?endif?>
+						<?if($ci%4==0 OR $ci==0):?><div class="row"><?endif?>
 						<?if($ad->featured >= Date::unix2mysql(time())):?>
-						<li class="<?=(core::cookie('list/grid')==0)?'col-lg-4 col-md-4 col-sm-4 col-xs-10 ad_griditem':'ad_listitem'?> clearfix featured_ad">
+						<li class="<?=(core::cookie('list/grid')==0)?'col-lg-3 col-md-3 col-sm-3 col-xs-6 ad_griditem':'ad_listitem'?> clearfix featured_ad">
 							<span class="feat_marker"><i class="glyphicon glyphicon-bookmark"></i></span>
 						<?else:?>
-						<li class="<?=(core::cookie('list/grid')==0)?'col-lg-4 col-md-4 col-sm-4 col-xs-10 ad_griditem':'ad_listitem'?> clearfix">
+						<li class="<?=(core::cookie('list/grid')==0)?'col-lg-3 col-md-3 col-sm-3 col-xs-6 ad_griditem':'ad_listitem'?> clearfix">
 						<?endif?>
 							<div class="ad_inner">
 								<div class="ad_photo">
@@ -192,7 +194,7 @@
 									<?if ($ad->price!=0):?>
 										<span class="ad_price"> 
 											<a class="add-transition" title="<?=HTML::chars($ad->title)?>" href="<?=Route::url('ad', array('controller'=>'ad','category'=>$ad->category->seoname,'seotitle'=>$ad->seotitle))?>">
-											<?=_e('Price');?>: <b><span class="price-curry"><?=i18n::money_format( $ad->price)?></span></b>
+											<!-- <?=_e('Price');?>:  --><b><span class="price-curry"><?=i18n::money_format( $ad->price)?></span></b>
 											</a>							 
 										</span>
 									<?elseif (($ad->price==0 OR $ad->price == NULL) AND core::config('advertisement.free')==1):?>
@@ -210,7 +212,7 @@
 							</div>
 						</li>
 						<?$ci++;?>
-						<?if($ci%3==0):?></div><div class="clearfix">&nbsp;</div><?endif?>
+						<?if($ci%4==0):?></div><div class="clearfix">&nbsp;</div><?endif?>
 						<?endforeach?>
 					</ul>
 				</div>

@@ -2,7 +2,7 @@
 <div class="pad_10tb">
 	<div class="container">
 		<div class="row">
-			<div class="<?=(Theme::get('sidebar_position')!='none')?'col-xs-9':'col-xs-12'?> <?=(Theme::get('sidebar_position')=='left')?'pull-right':'pull-left'?>">
+			<div class="<?=(Theme::get('sidebar_position')=='none')?'col-xs-9':'col-xs-12'?> <?=(Theme::get('sidebar_position')=='left')?'pull-right':'pull-left'?>">
 				<div class="page-header">
 					<h3><?=_e('Publish new advertisement')?></h3>
 				</div>
@@ -138,7 +138,7 @@
 					<!-- ad description -->
 					<?if($form_show['description'] != FALSE):?>
 						<div class="form-group">
-							<div class="col-xs-9">
+							<div class="col-xs-12">
 								<?= FORM::label('description', _e('Description'), array('for'=>'description', 'spellcheck'=>TRUE))?>
 								<?= FORM::textarea('description', Request::current()->post('description'), array('class'=>'form-control'.((Core::config("advertisement.description_bbcode"))? NULL:' disable-bbcode'), 'name'=>'description', 'id'=>'description' ,  'rows'=>10, 'required'))?>
 							</div>

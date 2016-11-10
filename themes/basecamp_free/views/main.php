@@ -5,6 +5,7 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="<?=i18n::html_lang()?>"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="<?=i18n::html_lang()?>"> <!--<![endif]-->
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <?=View::factory('header_metas',array('title'             => $title,
                                       'meta_keywords'     => $meta_keywords,
                                       'meta_description'  => $meta_description,
@@ -41,5 +42,8 @@
 <?=Theme::scripts($scripts,'async_defer', 'default', ['async' => '', 'defer' => ''])?>
 <?=core::config('general.html_footer')?>
 <?=(Kohana::$environment === Kohana::DEVELOPMENT)? View::factory('profiler'):''?>
+      <script>
+        $("div.navbar-fixed-top").autoHidingNavbar();
+      </script>
 </body>
 </html>
